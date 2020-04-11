@@ -26,7 +26,6 @@
     width: 150px;
     padding: 30px;
     padding-left: 44px;
-
   }
 
   #grid {
@@ -36,6 +35,14 @@
 
   #grid #article {
     padding-left: 65px;
+  }
+
+  img {
+    transition: transform 2s
+  }
+
+  img:hover {
+    transform: rotate(2deg);
   }
 
   @media(max-width: 900px) {
@@ -53,10 +60,16 @@
     }
 
     #grid #article {
-      padding:0px;
+      padding: 0px;
     }
   }
 
   body {
     margin-top: 0px;
   }
+
+  body {
+    background: url("38237327-ea8234e0-3761-11e8-8524-b42d30e8d834.png") no-repeat;
+    background-position: left;
+    background-size: 250px
+}

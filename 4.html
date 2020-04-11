@@ -1,7 +1,9 @@
 <!doctype html>
 <html>
 
-<head>
+
+<head> <!--head 태그 시작-->
+  <!-- 웹페이지 내용 정보와는 관련이 없음 -->
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162862149-1"></script>
   <script>
@@ -16,31 +18,44 @@
   </script>
 
   <title>WEB11 - The song Ryan likes</title>
+  <!--웹페이지 상단 태의 이름-->
   <meta charset="utf8">
-
+  <!--버젼? 을 맞춰주는 명령-->
   <link rel="stylesheet" href="style.css">
+  <!--CSS 코드(선택자) 들을 별도의 파일로 저장해두고, 그것을 불러오는 명령-->
+</head> <!--head 태그 종료-->
 
+<!--div 태그는 'block element' 로써, 줄바꿈이 자동으로 적용됨-->
+<!--p 태그는 'inline element' 로써, 줄바꿈이 자동으로 적용됨-->
+<!--    태그D는 block element 로써, 줄바꿈이 자동으로 적용됨-->
 
-</head>
-
-<body>
+<body> <!--body 태그 시작-->
+  <!--웹페이지 내용 안에 표현되는 정보-->
   <h1><a href="index.html">HOME</a></h1>
+  <!--웹페이지 내용에 보여지는 제목-->
   <div id="grid">
+    <!--여러개의 tag들을 통제하기 위해서 id="grid" 값을 부여하려고 div 라는(결과에 의미없는) 태그를 적용함, 이 grid 값은 CSS 문법에 의해서 선택자로 명기되고, CSS 문법에 의해서 스타일링이 적용된다.-->
     <ol>
+      <!--ordered 즉, 리스트 자체에 순서를 표현하기 위함-->
       <li><a href="1.html">Who is Sora?</a></li>
+      <!--리스트 라는 것을 표현함. 또한 a 태그에 href 속성을 넣어서 링크 기능을 적용함-->
       <li><a href="2.html">Sora's dream</a></li>
       <li><a href="3.html">Plan to marry</a></li>
       <li><a href="4.html" style="text-decoration:underline" id="active">The song Ryan likes</a></li>
 
     </ol>
-    <div id="article">
-      <h2>The song Ryan likes</h2>
+    <div id="article"> <!--여러개의 tag들을 통제하기 위해서 id="article" 값을 부여하려고 div 라는(결과에 의미없는) 태그를 적용함, 이 article 값은 CSS 문법에 의해서 선택자로 명기되고, CSS 문법에 의해서 스타일링이 적용된다.-->
+      <h2>The songs Ryan likes</h2>
+      <!--웹페이지 내용에 보여지는 제목. h1 과는 다른 제목이므로 h2 로 명기함-->
       <p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/AIzKsNIRrV4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <!--iframe 은 동영상을 넣기 위한 태그임. width 와 height 속성으로 영상 사이즈를 조정하고, src 속성으로 url 을 넣음. frameborder, allow,a utoplay 는 뭔지 모르겠음-->
+        <iframe width="500" height="315" src="https://www.youtube.com/embed/AIzKsNIRrV4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="500" height="315" src="https://www.youtube.com/embed/5Yu_wePKsRE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="500" height="315" src="https://www.youtube.com/embed/Ke2oEcMDzY4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </p>
     </div>
   </div>
-  <p>
+  <p> <!--discus 라는 오픈소스를 적용하기 위한 p 태그임. p 태그는 block element 로써, 줄바꿈이 자동으로 적용됨-->
   <div id="disqus_thread"></div>
   <script>
     /**
@@ -63,6 +78,6 @@
   <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
   </P>
-</body>
+</body> <!--body 태그 종료-->
 
-</html>
+</html> <!--html 태그 종료-->
