@@ -2,7 +2,8 @@
 <html>
 
 
-<head> <!--head 태그 시작-->
+<head>
+  <!--head 태그 시작-->
   <!-- 웹페이지 내용 정보와는 관련이 없음 -->
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162862149-1"></script>
@@ -21,16 +22,19 @@
   <!--웹페이지 상단 태의 이름-->
   <meta charset="utf8">
   <!--버젼? 을 맞춰주는 명령-->
-  <link rel="stylesheet" href="style.css">
-  <!--CSS 코드(선택자) 들을 별도의 파일로 저장해두고, 그것을 불러오는 명령-->
-</head> <!--head 태그 종료-->
+
+</head>
+<!--head 태그 종료-->
 
 <!--div 태그는 'block element' 로써, 줄바꿈이 자동으로 적용됨-->
 <!--p 태그는 'inline element' 로써, 줄바꿈이 자동으로 적용됨-->
 <!--    태그D는 block element 로써, 줄바꿈이 자동으로 적용됨-->
 
-<body> <!--body 태그 시작-->
+<body>
+  <!--body 태그 시작-->
   <!--웹페이지 내용 안에 표현되는 정보-->
+  <link rel="stylesheet" href="style.css">
+  <!--CSS 코드(선택자) 들을 별도의 파일로 저장해두고, 그것을 불러오는 명령-->
   <h1><a href="index.html">HOME</a></h1>
   <!--웹페이지 내용에 보여지는 제목-->
   <div id="grid">
@@ -44,7 +48,8 @@
       <li><a href="4.html" style="text-decoration:underline" id="active">The song Ryan likes</a></li>
 
     </ol>
-    <div id="article"> <!--여러개의 tag들을 통제하기 위해서 id="article" 값을 부여하려고 div 라는(결과에 의미없는) 태그를 적용함, 이 article 값은 CSS 문법에 의해서 선택자로 명기되고, CSS 문법에 의해서 스타일링이 적용된다.-->
+    <div id="article">
+      <!--여러개의 tag들을 통제하기 위해서 id="article" 값을 부여하려고 div 라는(결과에 의미없는) 태그를 적용함, 이 article 값은 CSS 문법에 의해서 선택자로 명기되고, CSS 문법에 의해서 스타일링이 적용된다.-->
       <h2>The songs Ryan likes</h2>
       <!--웹페이지 내용에 보여지는 제목. h1 과는 다른 제목이므로 h2 로 명기함-->
       <p>
@@ -55,7 +60,8 @@
       </p>
     </div>
   </div>
-  <p> <!--discus 라는 오픈소스를 적용하기 위한 p 태그임. p 태그는 block element 로써, 줄바꿈이 자동으로 적용됨-->
+  <p>
+    <!--discus 라는 오픈소스를 적용하기 위한 p 태그임. p 태그는 block element 로써, 줄바꿈이 자동으로 적용됨-->
   <div id="disqus_thread"></div>
   <script>
     /**
@@ -78,6 +84,8 @@
   <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
   </P>
-</body> <!--body 태그 종료-->
+</body>
+<!--body 태그 종료-->
 
-</html> <!--html 태그 종료-->
+</html>
+<!--html 태그 종료-->

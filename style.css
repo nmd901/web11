@@ -9,7 +9,7 @@
   }
 
   li {
-    color: skyblue;
+    color: green;
   }
 
   h1 {
@@ -23,9 +23,9 @@
   #grid ol {
     border-right: 3px solid gray;
     margin: 0px;
-    width: 150px;
+    width: 160px;
     padding: 30px;
-    padding-left: 44px;
+    padding-left: 52px;
   }
 
   #grid {
@@ -62,6 +62,11 @@
     #grid #article {
       padding: 0px;
     }
+
+    body {
+      background-position: top;
+      background-size: 1000px
+    }
   }
 
   body {
@@ -71,5 +76,6 @@
   body {
     background: url("38237327-ea8234e0-3761-11e8-8524-b42d30e8d834.png") no-repeat;
     background-position: left;
-    background-size: 250px
-}
+    background-size: 250px;
+    background-color: skyblue;
+  }
