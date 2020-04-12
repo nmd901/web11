@@ -77,5 +77,9 @@
     background: url("38237327-ea8234e0-3761-11e8-8524-b42d30e8d834.png") no-repeat;
     background-position: left;
     background-size: 250px;
-    background-color: skyblue;
+    background-color: powderblue;
+  }
+
+  body #button-location{
+    margin-left: 0px;
   }

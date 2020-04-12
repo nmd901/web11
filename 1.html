@@ -23,6 +23,21 @@
 <body>
   <link rel="stylesheet" href="style.css">
   <h1><a href="index.html">HOME</a></h1>
+
+  <div id="button-location">
+    <input id="night_day" type="button" value="night mode on" onclick="
+if(document.querySelector('#night_day').value === 'night mode on'){
+  document.querySelector('body').style.backgroundColor='black';
+  document.querySelector('body').style.color='white';
+  document.querySelector('#night_day').value = 'day mode on';
+} else {
+    document.querySelector('body').style.backgroundColor = 'powderblue';
+    document.querySelector('body').style.color='black';
+    document.querySelector('#night_day').value = 'night mode on';
+    }">
+
+  </div>
+
   <div id="grid">
     <ol>
       <li><a href="1.html" id="active">Who is Sora?</a></li>

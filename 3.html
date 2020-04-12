@@ -17,12 +17,22 @@
 
   <title>WEB11 - Plan to marry</title>
   <meta charset="utf8">
-  <input type="button" value="Click Me" onclick="alert('I love you')"
-</head>
+  <input type="button" value="Click Me" onclick="alert('I love you')" </head>
 
 <body>
   <link rel="stylesheet" href="style.css">
   <h1><a href="index.html">HOME</a></h1>
+
+  <div id="button-location">
+
+    <input type="button" value="night mode on" onclick="
+      document.querySelector('body').style.backgroundColor='black';
+      document.querySelector('body').style.color='white';">
+    <input type="button" value="day mode on" onclick="
+      document.querySelector('body').style.backgroundColor = 'powderblue';
+      document.querySelector('body').style.color='black';">
+
+  </div>
 
   <div id="grid">
     <ol>
