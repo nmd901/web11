@@ -47,11 +47,52 @@ h1{
 </head>
 
 <body>
-<!--
+  <!--
 <body style="background-color: black; color: white">
 -->
   <link rel="stylesheet" href="style.css">
   <h1><a href="index.html" id="active">HOME</a></h1>
+
+  <script>
+    function nightDayHandler(self) {
+      if (self.value === 'night mode on') {
+        document.querySelector('body').style.backgroundColor = 'black';
+        document.querySelector('body').style.color = 'white';
+        self.value = 'day mode on';
+
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while (i < alist.length) {
+          alist[i].style.color = 'white';
+          i = i + 1;
+        }
+      } else {
+        document.querySelector('body').style.backgroundColor = 'orange';
+        document.querySelector('body').style.color = 'green';
+        self.value = 'night mode on';
+
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while (i < alist.length) {
+          alist[i].style.color = 'green';
+          i = i + 1;
+        }
+      }
+    }
+  </script>
+
+  <span id="button-location">
+    <input id="test1" type="button" value="night mode on" onclick="
+nightDayHandler(this);
+  ">
+
+
+    <input id="test1" type="button" value="night mode on" onclick="
+    nightDayHandler(this);
+">
+
+  </span>
+
   <div id="grid">
     <ol>
       <li><a href="1.html">Who is Sora?</a></li>
