@@ -20,10 +20,47 @@
 </head>
 
 <body>
-<div style='color: pink'>What's up?</div>
+
+  <div style='color: pink'>What's up?</div>
 
   <link rel="stylesheet" href='style.css'>
+
   <h1><a href="index.html">HOME</a></h1>
+
+  <span id="button-location">
+    <input id="test1" type="button" value="night mode on" onclick="
+
+if(document.querySelector('#test1').value === 'night mode on'){
+  document.querySelector('body').style.backgroundColor = 'black';
+  document.querySelector('body').style.color = 'white';
+  document.querySelector('#test1').value = 'day mode on';
+
+var alist = document.querySelectorAll('a');
+var i = 0;
+while(i < alist.length){
+  alist[i].style.color = 'white';
+  i = i + 1;
+}
+}
+ else  {
+    document.querySelector('body').style.backgroundColor = 'white';
+    document.querySelector('body').style.color = 'black';
+    document.querySelector('#test1').value = 'night mode on';
+
+    var alist = document.querySelectorAll('a');
+    var i = 0;
+    while(i < alist.length){
+      alist[i].style.color = 'black';
+      i = i + 1;
+}
+  }
+">
+
+  </span>
+
+
+
+
   <div id="grid">
     <ol>
       <li><a href="1.html">Who is Sora?</a></li>

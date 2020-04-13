@@ -37,6 +37,42 @@
   <!--CSS 코드(선택자) 들을 별도의 파일로 저장해두고, 그것을 불러오는 명령-->
   <h1><a href="index.html">HOME</a></h1>
   <!--웹페이지 내용에 보여지는 제목-->
+
+
+  <span id="button-location">
+    <input id="test1" type="button" value="night mode on" onclick="
+
+  if(document.querySelector('#test1').value === 'night mode on'){
+  document.querySelector('body').style.backgroundColor = 'black';
+  document.querySelector('body').style.color = 'white';
+  document.querySelector('#test1').value = 'day mode on';
+
+  var alist = document.querySelectorAll('a');
+  var i = 0;
+  while(i < alist.length){
+  alist[i].style.color = 'white';
+  i = i + 1;
+}
+}
+
+
+   else {
+    document.querySelector('body').style.backgroundColor = 'pink';
+    document.querySelector('body').style.color = 'black';
+    document.querySelector('#test1').value = 'night mode on';
+
+    var alist = document.querySelectorAll('a');
+    var i = 0;
+    while(i < alist.length){
+      alist[i].style.color = 'black';
+      i = i + 1;
+    }
+  }
+  ">
+
+  </span>
+
+
   <div id="grid">
     <!--여러개의 tag들을 통제하기 위해서 id="grid" 값을 부여하려고 div 라는(결과에 의미없는) 태그를 적용함, 이 grid 값은 CSS 문법에 의해서 선택자로 명기되고, CSS 문법에 의해서 스타일링이 적용된다.-->
     <ol>
@@ -54,9 +90,11 @@
       <!--웹페이지 내용에 보여지는 제목. h1 과는 다른 제목이므로 h2 로 명기함-->
       <p>
         <!--iframe 은 동영상을 넣기 위한 태그임. width 와 height 속성으로 영상 사이즈를 조정하고, src 속성으로 url 을 넣음. frameborder, allow,a utoplay 는 뭔지 모르겠음-->
+        <iframe width="500" height="315" src="https://www.youtube.com/embed/o_5CD_Ia8Bo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <iframe width="500" height="315" src="https://www.youtube.com/embed/AIzKsNIRrV4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <iframe width="500" height="315" src="https://www.youtube.com/embed/5Yu_wePKsRE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <iframe width="500" height="315" src="https://www.youtube.com/embed/Ke2oEcMDzY4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
       </p>
     </div>
   </div>

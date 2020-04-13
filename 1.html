@@ -16,29 +16,58 @@
       gtag('config', 'UA-162862149-1');
     </script>
   </div>
+
   <title>WEB11 - Who is Sorma?</title>
+
   <meta charset="utf8">
 </head>
 
 <body>
   <link rel="stylesheet" href="style.css">
+
   <h1><a href="index.html">HOME</a></h1>
 
-  <div id="button-location">
-    <input id="night_day" type="button" value="night mode on" onclick="
-if(document.querySelector('#night_day').value === 'night mode on'){
-  document.querySelector('body').style.backgroundColor='black';
-  document.querySelector('body').style.color='white';
-  document.querySelector('#night_day').value = 'day mode on';
-} else {
-    document.querySelector('body').style.backgroundColor = 'powderblue';
-    document.querySelector('body').style.color='black';
-    document.querySelector('#night_day').value = 'night mode on';
-    }">
+  <span id="button-location">
+    <input type="button" value="night mode on" onclick=" <!--버튼 만들고, 값 넣고, 온클릭 시,-->
+    var target = document.querySelector('body'); <!--변수 target 이라는 변수는 자바스크립트가 선택자로써 body 라는 태그를 불러온다 라는 뜻-->
+    if(this.value === 'night mode on'){ <!--this 는 현재 소속된 태그를 지칭하는 자바스크립트 쿼리셀렉터를 말하고, 그것의 value 값과 원래 상태의 밸류값의 비교 연산을 실시해서, 참일경우와 거짓일경우에 따라서 프로그램을 실행시킨다-->
+      target.style.backgroundColor='black'; <!--if 값이 참 일경우, 앞서 선언한 자바스크립트 쿼리셀렉터의 바디 태그에 대한 배경색을 블랙으로 한다-->
+      target.style.color='white'; <!--if 값이 참 일경우, 글자 색 또한 하얀색으로 한다.-->
+      this.value = 'day mode on'; <!--if 값이 참 일경우, 현재 소속된 태그의 밸류값을 'day mode on' 으로 치환한다-->
 
-  </div>
+      var alist = document.querySelectorAll('a'); <!--변수 alist 라는 변수를 만들고, 자바스크립트 쿼리셀렉터 a태그 를 이 변수와 같다고 본다-->
+      var i = 0; <!--또한 변수 i 를 선언하고, 0 을 i 에 넣는다-->
+      while(i < alist.length){ <!--반복문 while 을 실행하고, i 값이 alist 의 요소 개수 보다 작을때만 반복문을 계속 실행시킨다.(값이 같아지면 실행 중지)-->
+        alist[i].style.color = 'powderblue'; <!--a 태그의 모든 요소 들이 i 값이 증가됨에 따라 하나하나씩 소환되고, 그 텍스트 칼라가 powderblue 로 지정된다-->
+        i = i + 1; <!--한싸이클 돌때마다 현재의 i 값에 1 이 더해진다. 이 반복문은 alist의 요소 개수와 같아 지는 순간(즉 페이지 안의 모든 a 태그의 색을 변경시킨 후) 종료된다-->
+}
 
-  <div id="grid">
+}   else { <!-- 버튼을 다시한번 더 클릭했을때, input 태그의 밸류값은 'day mode on' 이므로, 온클릭시 if 조건에 대하여 거짓이 되어, 이곳 else 로 점프해 온다-->
+    var target = document.querySelector('body'); <!--변수 선언 위에 있지만, 그냥 한번 더 써줌 target 이라는 변수는 자바스크립트가 선택자로써 body 라는 태그를 불러온다 라는 뜻-->
+
+    target.style.backgroundColor = 'powderblue'; <!--아까 지정한 쿼리셀렉터 body 태그의 내용물에 대하여, 배경색을 파우더 블루로 바꾼다.-->
+    target.style.color = 'black'; <!--아까 지정한 쿼리셀렉터 body 태그 내용물에 대하여, 글자 색을 블랙으로 바꾼다-->
+    this.value = 'night mode on'; <!--소속된 태그의 밸류값을 'night mode on' 으로 치환한다-->
+
+    var alist = document.querySelectorAll('a'); <!--아까 선언한 변수 alist 이 있지만, 명확하게 하기 위해 한번더 alist 라는 변수를 선언해준다-->
+    var i = 0; <!--다시 한번 i 라는 변수를 0 으로 만들어준다.(저 위에 if 절에도 i 가 있긴 하지만, 이미 while 을 거치면서 i 값이 7이 되어버렸음. alist 의 요소는 7개임) / while 구문의 특징은, 조건에 부합되지 않으면(거짓이면) while 구문 자체를 읽지 않는다. if 구문 특징은, 조건에 부합하지 않으면(거짓이면) else 절을 실행시킨다.-->
+    while(i < alist.length){
+    alist[i].style.color = 'blue';
+    i = i + 1;
+  }
+}
+    ">
+
+<span>
+</span>
+
+
+  </span> <!--inline element-->
+
+
+
+
+  <div id="grid"> <!--blick element-->
     <ol>
       <li><a href="1.html" id="active">Who is Sora?</a></li>
       <li><a href="2.html">Sora's dream</a></li>
@@ -57,6 +86,44 @@ if(document.querySelector('#night_day').value === 'night mode on'){
       </ul>
     </div>
   </div>
+
+  <div id="button-location"> <!--  this=document.querySelector('#night_day2') 와 var target = document.querySelector('body') 미적용으로 리팩토링 하지 않은것-->
+    <input id="night_day2" type="button" value="night mode on" onclick="
+  if(document.querySelector('#night_day2').value === 'night mode on'){
+  document.querySelector('body').style.backgroundColor='black';
+  document.querySelector('body').style.color='white';
+  document.querySelector('#night_day2').value = 'day mode on'; <!--if 조건이 참 일경우, night_day2 아이디 선택자가 위치한 태그의 값을 day mode on 으로 변경시킴-->
+  document.querySelector('#night_day').value = 'day mode on'; <!--if 조건이 참 일경우, night_day 아이디 선택자가 위치한 태그의 값을 day mode on 으로 변경시킴-->
+  document.querySelector('a').style.color='white'; <!--if 조건이 참 일경우, a 태그의 글자색을 하얀색으로 변경시킴. 그러나 모든 a 태그에 적용되지 않고, 가장 첫번째 a 태그에만 변경이 적용된다. 그래서 우리는 while 반복문을 이용해서 순차적으로 하나하나씩 모든 a 태그의 색을 변경시키는 방법을 적용했다.-->
+  } else {
+    document.querySelector('body').style.backgroundColor = 'powderblue';
+    document.querySelector('body').style.color='black';
+    document.querySelector('#night_day2').value = 'night mode on';
+    document.querySelector('#night_day').value = 'night mode on';
+    document.querySelector('a').style.color='green';
+    }">
+
+  </div>
+
+  <div id="button-location">
+    <input id="night_day" type="button" value="night mode on" onclick=" <!--id 선택자를 night_day 로 해서, night-day2 와 구분을 짓는다.-->
+if(document.querySelector('#night_day').value === 'night mode on'){
+  document.querySelector('body').style.backgroundColor='black';
+  document.querySelector('body').style.color='white';
+  document.querySelector('#night_day').value = 'day mode on'; <!--id 선택자를 night_day 로 해서, night-day2 와 구분을 짓는다.-->
+  document.querySelector('#night_day2').value = 'day mode on'; <!--id 선택자를 night_day2 로 해서, night-day 와 구분을 짓는다.-->
+  document.querySelector('a').style.color='white';
+} else {
+    document.querySelector('body').style.backgroundColor = 'powderblue';
+    document.querySelector('body').style.color='black';
+    document.querySelector('#night_day').value = 'night mode on';
+    document.querySelector('#night_day2').value = 'night mode on';
+    document.querySelector('a').style.color='green';
+    }">
+
+  </div>
+
+
 
   <p>
   <div id="disqus_thread"></div>
