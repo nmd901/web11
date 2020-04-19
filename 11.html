@@ -44,41 +44,37 @@
       var target = document.querySelector('body'); //변수 target 이라는 변수는 자바스크립트가  "querySelector 라는 메쏘드의 인자로써 body 태그를 넣었을때 불러와지는 데이터" 라는 뜻-- >
       if (self.value === 'night mode on') {
         //<!--nightDayHandler 라는 함수에 this가 들어가 있고, this의 value 값과 원래 상태의 밸류값의 비교 연산을 실시해서, 참일경우와 거짓일경우에 따라서 프로그램을 실행시킨다-- >
-        Body.setBackgroundColor('orange'); // BodySetBackgroundColor 라는 함수의 파라미터에다가 orange 라는 인수값을 넣는다.
-        Body.setFontColor('red'); // BodySetFontColor 라는 함수의 파라미터에다가 red 라는 인수값을 넣는다.
+        BodySetBackgroundColor('orange'); // BodySetBackgroundColor 라는 함수의 파라미터에다가 orange 라는 인수값을 넣는다.
+        BodySetFontColor('red'); // BodySetFontColor 라는 함수의 파라미터에다가 red 라는 인수값을 넣는다.
         self.value = 'day mode on'; //< !--if 값이 참 일경우, 현재 소속된 태그의 밸류값을 'day mode on' 으로 치환한다-- >
 
-        Links.setColor('red'); // ㅣLinksSetColor 라는 함수의 파라미터에다가 red 라는 인수값을 넣는다.
+        LinksSetColor('red'); // ㅣLinksSetColor 라는 함수의 파라미터에다가 red 라는 인수값을 넣는다.
 
       } else {
         //<!--버튼을 다시한번 더 클릭했을때, input 태그의 밸류값은 'day mode on' 이므로, 온클릭시 if 조건에 대하여 거짓이 되어, 이곳 else 로 점프해 온다-- >
         //var target = document.querySelector('body'); 변수 선언 위에 있지만, 그냥 한번 더 써줌.
-        Body.setBackgroundColor('powderblue'); // BodySetBackgroundColor 함수의 파라미터 자리에 powderblue 라는 인수값을 넣는다.
-        Body.setFontColor('black'); // BodySetFontColor 라는 함수의 파라미터 자리에 black 이라는 인수값을 넣는다.
+        BodySetBackgroundColor('powderblue'); // BodySetBackgroundColor 함수의 파라미터 자리에 powderblue 라는 인수값을 넣는다.
+        BodySetFontColor('black'); // BodySetFontColor 라는 함수의 파라미터 자리에 black 이라는 인수값을 넣는다.
         self.value = 'night mode on'; // nightDayHandler 라는 함수의 파라미터값인 self 에다가 인수 this 를 넣는다.
 
-        Links.setColor('blue');
+        LinksSetColor('blue');
       }
     }
   </script>
 </head>
 
 <body>
-  <div style='color : red; font-weight : bold;'>객체 활용.</div>
+  <div style='color : red; font-weight : bold;'>this->self, function, var target, if, while, alist are used.</div>
   <link rel="stylesheet" href="style.css">
   <h1><a href="index.html">HOME</a></h1>
-
 
   <span id="button-location">
     <input type="button" value="night mode on" onclick=" <!--버튼 만들고, 값 넣고, 온클릭 시,-->
 nightDayHandler(this);
     ">
     <!--this 라는 치환값이 input 을 가리키도록 하기 위해서 this 를 함수의 인자로써 사용하고, 그 인자를 nightDayHandler 라는 함수의 매개변수 self 에 넣는다. 그렇게하여 function 의 self 라는 모든 매개변수는 곧 this 라는 인자를 의미하는 것과 같게 된다-->
-
   </span>
   <!--inline element-->
-
-  <div><a href="11.html">Go to 11</a></div>
 
   <div id="grid">
     <!--block element-->
