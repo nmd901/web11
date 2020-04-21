@@ -18,11 +18,17 @@
   <title>WEB11-Sora's dream</title>
   <!--타이틀은 인터넷 브라우저 탭에 명시되는 이름을 나타냄. head 태그에 넣으면 됨-->
   <meta charset="utf8">
+
+    <script src="colors1.js"></script>
+    <!-- 파일로 코드를 정리정돈 한다 -->
+
 </head>
 
 <body>
   <div style='color : red; font-weight : bold;'>this, target, alist are used.</div>
+
   <link rel="stylesheet" href="style.css">
+  <!-- 파일로 코드를 정리정돈 한다 -->
   <!--파일 link 태그의 부하로써 rel 속성과 href 속성이 있고 href 속성의 값은 html 파일이다. rel 속성은 relation(관계) 라는 뜻으로, stylesheet 과 관계가 있는 뜻이고, href 는 hypertext reference 라는 뜻으로, 연결되는 참조 주소 라는 뜻. 그리고 html 속성에 대한 값(value) 는 ""(쌍따옴표) 로 묶어주는게 약속이다-->
   <h1><a href='index.html'>HOME</a></h1>
   <!--a 태그(링크)의 부하로써 href 속성이 있고, 그 속성의 값은 index.html 파일이다.-->
@@ -30,15 +36,15 @@
   <span id='button-location'>
     <!--span 은 inline 태그이고, id 속성을 지정하고, 그 값은 button-location 이다. 이 id 속성으로 해당 태그인 span 태그의 스타일링을 조정할 수 있다-->
 
-    <input id="test1" type="button" value="night mode on" onclick="
+    <input id="test1" type="button" value="a태그 색 적용 night mode on" onclick="
 
 var target = document.querySelector('body');
 var alist = document.querySelectorAll('a');
 
-if(this.value === 'night mode on') {
+if(this.value === 'a태그 색 적용 night mode on') {
    target.style.backgroundColor = 'black';
    target.style.color = 'white';
-   this.value = 'day mode on';
+   this.value = 'a태그 색 적용 day mode on';
 <!--document 라는 객체 에 속해있는 querySelector 라는 함수(메쏘드) 에 인자로 #test1 을 넣게되면, id 가 속한 태그를 불러오게 되는데, 그 중에서 .value 는 value 값을 불러내는 코드이다.-->
 
 <!--document 객체의 querySelector 메쏘드에 인자로 tag명을 넣게되면, 해당 태그가 속한 데이터들이 불러와지고, 거기에다가 .style.backgroundColor 를 입력하면 배경색을 지정할 수 있다-->
@@ -53,7 +59,7 @@ if(this.value === 'night mode on') {
  else { <!--온클릭시 벨류값이 night mode on 과 비교 해서 false 이면, if 문의 else 가 실행된다-->
    target.style.backgroundColor = 'white';
    target.style.color = 'black';
-   this.value = 'night mode on';
+   this.value = 'a태그 색 적용 night mode on';
 
    var i = 0;
    while(i < alist.length){
@@ -62,6 +68,15 @@ if(this.value === 'night mode on') {
   }
 }
 ">
+
+<span id="button-location">
+  <input type="button" value="colors1 객체&메쏘드 night mode on" onclick=" <!--버튼 만들고, 값 넣고, 온클릭 시,-->
+nightDayHandler(this);
+  ">
+  <!--this 라는 치환값이 input 을 가리키도록 하기 위해서 this 를 함수의 인자로써 사용하고, 그 인자를 nightDayHandler 라는 함수의 매개변수 self 에 넣는다. 그렇게하여 function 의 self 라는 모든 매개변수는 곧 this 라는 인자를 의미하는 것과 같게 된다-->
+
+</span>
+
     <!--input 태그는 버튼 같은 기능을 삽입하는 용도이고, type 으로 버튼을 선택하고, value 로 버튼에 명시되는 값을 입력하고, onclick 속성으로 클릭에 따른 변동사항을 프로그래밍 한다-->
 <div><a href="11.html">Go to 11</a></div>
   </span>

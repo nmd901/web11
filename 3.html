@@ -18,23 +18,43 @@
   <title>WEB11-Plan to marry</title>
   <meta charset="utf8">
   <input type="button" value="Click Me" onclick="alert('I love you. Be happy.')">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- 이렇게 주소를 넣으면 끝이다. 더이상 뭘 다운로드 받거나 할 필요가 없다. jquery 손쉽게 사용 가능하다 -->
+
+  <script src="colors2.js"></script>
+  <!-- 파일로 코드를 정리정돈 한다 -->
+
+
 </head>
 
 <body>
-    <div style='color : red; font-weight : bold;'>if, while are not used. Two buttons applied.</div>
+  <div style='color : red; font-weight : bold;'>if, while are not used. Two buttons applied.</div>
+
   <link rel="stylesheet" href="style.css">
+  <!-- 파일로 코드를 정리정돈 한다 -->
+
   <h1><a href="index.html">HOME</a></h1>
 
   <div id="button-location">
 
-    <input type="button" value="night mode on" onclick="
+    <input type="button" value="one time night mode on" onclick="
       document.querySelector('body').style.backgroundColor='black';
       document.querySelector('body').style.color='white';">
-    <input type="button" value="day mode on" onclick="
+    <input type="button" value="one time day mode on" onclick="
       document.querySelector('body').style.backgroundColor = 'powderblue';
       document.querySelector('body').style.color='black';">
   </div>
-<div><a href="11.html">Go to 11</a></div>
+
+  <span id="button-location">
+    <input type="button" value="colors2 jquery night mode on" onclick=" <!--버튼 만들고, 값 넣고, 온클릭 시,-->
+nightDayHandler(this);
+    ">
+    <!--this 라는 치환값이 input 을 가리키도록 하기 위해서 this 를 함수의 인자로써 사용하고, 그 인자를 nightDayHandler 라는 함수의 매개변수 self 에 넣는다. 그렇게하여 function 의 self 라는 모든 매개변수는 곧 this 라는 인자를 의미하는 것과 같게 된다-->
+
+  </span>
+
+  <div><a href="11.html">Go to 11</a></div>
 
   <div id="grid">
     <ol>
@@ -46,10 +66,10 @@
 
     <div id="article">
       <h2>Plan to marry</h2>
-      <img src="marriage.png" alt="merriage"width="300px">
+      <img src="marriage.png" alt="merriage" width="300px">
       <img src="세로 소라 생일 24.png" alt="her 24th birthday" width="300px">
       <img src="세로 부산 한복.png" alt="in Busan wearing Hanbok" width="300px">
-      <img src="세로 부산 바다.png" alt="in Busan at the sea"width="300px">
+      <img src="세로 부산 바다.png" alt="in Busan at the sea" width="300px">
       <!--<img src="24 생일.jpg" width="300px" style="transform: rotate(90deg)">
       -->
       <p>

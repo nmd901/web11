@@ -18,63 +18,29 @@
   </div>
   <title>WEB11- Who is Sorma?</title>
   <meta charset="utf8">
-  <script>
-    function LinksSetColor(color) { //LinksSelector 의 매개변수는 color 이다.
-      var alist = document.querySelectorAll('a'); //< !--변수 alist 라는 변수를 만들고, 자바스크립트 쿼리셀렉터 a태그 를 이 변수와 같다고 본다-- >
-      var i = 0; //< !--또한 변수 i 를 선언하고, 0 을 i 에 넣는다-- >
-      while (i < alist.length) {
-        //<!--반복문 while 을 실행하고, i 값이 alist 의 요소 개수 보다 작을때만 반복문을 계속 실행시킨다.(값이 같아지면 실행 중지) -- >
-        alist[i].style.color = color; //< !--a 태그의 모든 요소 들이 i 값이 증가됨에 따라 하나하나씩 소환되고, 그 텍스트 칼라가 color 라는 매개변수이고, 여기에 인수값이 들어간다-- >
-        i = i + 1; //< !--한싸이클 돌때마다 현재의 i 값에 1 이 더해진다.이 반복문은 alist의 요소 개수와 같아 지는 순간(즉 페이지 안의 모든 a 태그의 색을 변경시킨 후) 종료된다-- >
-      }
-    }
 
-    function BodySetFontColor(color) {
-      var target = document.querySelector('body');
-      target.style.color = color; //< !--if 값이 참 일경우, 글자 색 또한 매개변수 color 이 된다.-- >
-      //  근데 function 안에 target 이 들어간 블록이 들어가면 안됨? 해보니까 작동 안되던데 왜 안되는거지??
-    }
-
-    function BodySetBackgroundColor(color) {
-      var target = document.querySelector('body');
-      target.style.backgroundColor = color; //
-    }
-
-    function nightDayHandler(self) { //nightDayHandler 함수에 this 라는 값이 대입됨.
-      var target = document.querySelector('body'); //변수 target 이라는 변수는 자바스크립트가  "querySelector 라는 메쏘드의 인자로써 body 태그를 넣었을때 불러와지는 데이터" 라는 뜻-- >
-      if (self.value === 'night mode on') {
-        //<!--nightDayHandler 라는 함수에 this가 들어가 있고, this의 value 값과 원래 상태의 밸류값의 비교 연산을 실시해서, 참일경우와 거짓일경우에 따라서 프로그램을 실행시킨다-- >
-        Body.setBackgroundColor('orange'); // BodySetBackgroundColor 라는 함수의 파라미터에다가 orange 라는 인수값을 넣는다.
-        Body.setFontColor('red'); // BodySetFontColor 라는 함수의 파라미터에다가 red 라는 인수값을 넣는다.
-        self.value = 'day mode on'; //< !--if 값이 참 일경우, 현재 소속된 태그의 밸류값을 'day mode on' 으로 치환한다-- >
-
-        Links.setColor('red'); // ㅣLinksSetColor 라는 함수의 파라미터에다가 red 라는 인수값을 넣는다.
-
-      } else {
-        //<!--버튼을 다시한번 더 클릭했을때, input 태그의 밸류값은 'day mode on' 이므로, 온클릭시 if 조건에 대하여 거짓이 되어, 이곳 else 로 점프해 온다-- >
-        //var target = document.querySelector('body'); 변수 선언 위에 있지만, 그냥 한번 더 써줌.
-        Body.setBackgroundColor('powderblue'); // BodySetBackgroundColor 함수의 파라미터 자리에 powderblue 라는 인수값을 넣는다.
-        Body.setFontColor('black'); // BodySetFontColor 라는 함수의 파라미터 자리에 black 이라는 인수값을 넣는다.
-        self.value = 'night mode on'; // nightDayHandler 라는 함수의 파라미터값인 self 에다가 인수 this 를 넣는다.
-
-        Links.setColor('blue');
-      }
-    }
-  </script>
+  <script src="colors1.js"></script>
+  <!-- 파일로 코드를 정리정돈 한다 -->
 </head>
 
 <body>
   <div style='color : red; font-weight : bold;'>객체 활용.</div>
+
   <link rel="stylesheet" href="style.css">
+  <!-- 파일로 코드를 정리정돈 한다 -->
+
   <h1><a href="index.html">HOME</a></h1>
 
 
   <span id="button-location">
-    <input type="button" value="night mode on" onclick=" <!--버튼 만들고, 값 넣고, 온클릭 시,-->
+    <input type="button" value="colors1 객체&메쏘드 night mode on" onclick=" <!--버튼 만들고, 값 넣고, 온클릭 시,-->
 nightDayHandler(this);
     ">
     <!--this 라는 치환값이 input 을 가리키도록 하기 위해서 this 를 함수의 인자로써 사용하고, 그 인자를 nightDayHandler 라는 함수의 매개변수 self 에 넣는다. 그렇게하여 function 의 self 라는 모든 매개변수는 곧 this 라는 인자를 의미하는 것과 같게 된다-->
-
+    <span id="button-location">
+      <input type="button" value="colors1 객체&메쏘드 night mode on" onclick=" <!--버튼 만들고, 값 넣고, 온클릭 시,-->
+  nightDayHandler(this);
+      ">
   </span>
   <!--inline element-->
 
@@ -104,36 +70,36 @@ nightDayHandler(this);
 
   <div id="button-location">
     <!--  this=document.querySelector('#night_day2') 와 var target = document.querySelector('body') 미적용으로 리팩토링 하지 않은것-->
-    <input id="night_day2" type="button" value="night mode on" onclick="
-  if(document.querySelector('#night_day2').value === 'night mode on'){
+    <input id="night_day2" type="button" value="a태그 색 미적용 night mode on" onclick="
+  if(document.querySelector('#night_day2').value === 'a태그 색 미적용 night mode on'){
   document.querySelector('body').style.backgroundColor='black';
   document.querySelector('body').style.color='white';
-  document.querySelector('#night_day2').value = 'day mode on'; <!--if 조건이 참 일경우, night_day2 아이디 선택자가 위치한 태그의 값을 day mode on 으로 변경시킴-->
-  document.querySelector('#night_day').value = 'day mode on'; <!--if 조건이 참 일경우, night_day 아이디 선택자가 위치한 태그의 값을 day mode on 으로 변경시킴-->
+  document.querySelector('#night_day2').value = 'a태그 색 미적용 day mode on'; <!--if 조건이 참 일경우, night_day2 아이디 선택자가 위치한 태그의 값을 day mode on 으로 변경시킴-->
+  document.querySelector('#night_day').value = 'a태그 색 미적용 day mode on'; <!--if 조건이 참 일경우, night_day 아이디 선택자가 위치한 태그의 값을 day mode on 으로 변경시킴-->
   document.querySelector('a').style.color='white'; <!--if 조건이 참 일경우, a 태그의 글자색을 하얀색으로 변경시킴. 그러나 모든 a 태그에 적용되지 않고, 가장 첫번째 a 태그에만 변경이 적용된다. 그래서 우리는 while 반복문을 이용해서 순차적으로 하나하나씩 모든 a 태그의 색을 변경시키는 방법을 적용했다.-->
   } else {
     document.querySelector('body').style.backgroundColor = 'powderblue';
     document.querySelector('body').style.color='black';
-    document.querySelector('#night_day2').value = 'night mode on';
-    document.querySelector('#night_day').value = 'night mode on';
+    document.querySelector('#night_day2').value = 'a태그 색 미적용 night mode on';
+    document.querySelector('#night_day').value = 'a태그 색 미적용 night mode on';
     document.querySelector('a').style.color='green';
     }">
 
   </div>
 
   <div id="button-location">
-    <input id="night_day" type="button" value="night mode on" onclick=" <!--id 선택자를 night_day 로 해서, night-day2 와 구분을 짓는다.-->
-if(document.querySelector('#night_day').value === 'night mode on'){
+    <input id="night_day" type="button" value="a태그 색 미적용 night mode on" onclick=" <!--id 선택자를 night_day 로 해서, night-day2 와 구분을 짓는다.-->
+if(document.querySelector('#night_day').value === 'a태그 색 미적용 night mode on'){
   document.querySelector('body').style.backgroundColor='black';
   document.querySelector('body').style.color='white';
-  document.querySelector('#night_day').value = 'day mode on'; <!--id 선택자를 night_day 로 해서, night-day2 와 구분을 짓는다.-->
-  document.querySelector('#night_day2').value = 'day mode on'; <!--id 선택자를 night_day2 로 해서, night-day 와 구분을 짓는다.-->
+  document.querySelector('#night_day').value = 'a태그 색 미적용 day mode on'; <!--id 선택자를 night_day 로 해서, night-day2 와 구분을 짓는다.-->
+  document.querySelector('#night_day2').value = 'a태그 색 미적용 day mode on'; <!--id 선택자를 night_day2 로 해서, night-day 와 구분을 짓는다.-->
   document.querySelector('a').style.color='white';
 } else {
     document.querySelector('body').style.backgroundColor = 'powderblue';
     document.querySelector('body').style.color='black';
-    document.querySelector('#night_day').value = 'night mode on';
-    document.querySelector('#night_day2').value = 'night mode on';
+    document.querySelector('#night_day').value = 'a태그 색 미적용 night mode on';
+    document.querySelector('#night_day2').value = 'a태그 색 미적용 night mode on';
     document.querySelector('a').style.color='green';
     }">
 

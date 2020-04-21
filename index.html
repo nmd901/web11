@@ -42,8 +42,8 @@ h1{
     <li><a href="2.html">Sora's dream</a></li>
     <li><a href="3.html">Plan to marry</a></li>
     <li><a href="4.html">The song Ryan likes</a></li>
-  </ol>
--->
+  </ol> -->
+
 </head>
 
 <body>
@@ -55,10 +55,10 @@ h1{
 
   <script>
     function nightDayHandler(self) {
-      if (self.value === 'night mode on') {
+      if (self.value === '객체&메쏘드 night mode on') {
         document.querySelector('body').style.backgroundColor = 'black';
         document.querySelector('body').style.color = 'white';
-        self.value = 'day mode on';
+        self.value = '객체&메쏘드 day mode on';
 
         var alist = document.querySelectorAll('a');
         var i = 0;
@@ -69,7 +69,7 @@ h1{
       } else {
         document.querySelector('body').style.backgroundColor = 'orange';
         document.querySelector('body').style.color = 'green';
-        self.value = 'night mode on';
+        self.value = '객체&메쏘드 night mode on';
 
         var alist = document.querySelectorAll('a');
         var i = 0;
@@ -82,12 +82,12 @@ h1{
   </script>
 
   <span id="button-location">
-    <input id="test1" type="button" value="night mode on" onclick="
+    <input id="test1" type="button" value="객체&메쏘드 night mode on" onclick="
 nightDayHandler(this);
   ">
 
 
-    <input id="test1" type="button" value="night mode on" onclick="
+    <input type="button" value="객체&메쏘드 night mode on" onclick="
     nightDayHandler(this);
 ">
 
