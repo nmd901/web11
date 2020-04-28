@@ -2,6 +2,7 @@
 <html>
 
 <head>
+  <!-- =================================== -->
   <div>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162862149-1"></script>
@@ -16,120 +17,118 @@
       gtag('config', 'UA-162862149-1');
     </script>
   </div>
+  <!-- =================================== -->
+
   <title>WEB11- Who is Sorma?</title>
   <meta charset="utf8">
-
   <script src="colors1.js"></script>
-  <!-- 파일로 코드를 정리정돈 한다 -->
+  <!-- .js 파일로 코드를 정리정돈 한다 -->
 </head>
 
 <body>
-  <div style='color : red; font-weight : bold;'>객체 활용.</div>
+  <div style="color : red; font-weight : bold">객체 활용.</div>
 
   <link rel="stylesheet" href="style.css">
-  <!-- 파일로 코드를 정리정돈 한다 -->
+  <!-- .css 파일로 코드를 정리정돈 한다 -->
 
   <h1><a href="index.html">HOME</a></h1>
 
-
   <span id="button-location">
-    <input type="button" value="colors1 객체&메쏘드 night mode on" onclick=" <!--버튼 만들고, 값 넣고, 온클릭 시,-->
-nightDayHandler(this);
-    ">
+    <input type="button" value="colors1.js 객체&메쏘드 night mode on" onclick="nightDayHandler(this);">
     <!--this 라는 치환값이 input 을 가리키도록 하기 위해서 this 를 함수의 인자로써 사용하고, 그 인자를 nightDayHandler 라는 함수의 매개변수 self 에 넣는다. 그렇게하여 function 의 self 라는 모든 매개변수는 곧 this 라는 인자를 의미하는 것과 같게 된다-->
     <span id="button-location">
-      <input type="button" value="colors1 객체&메쏘드 night mode on" onclick=" <!--버튼 만들고, 값 넣고, 온클릭 시,-->
-  nightDayHandler(this);
-      ">
-  </span>
-  <!--inline element-->
+      <input type="button" value="colors1.js 객체&메쏘드 night mode on" onclick="nightDayHandler(this);">
+    </span>
+    <!--span 은 inline element 이다-->
 
-  <div><a href="11.html">Go to 11</a></div>
+    <div><a href="11.html">Go to 11</a></div>
 
-  <div id="grid">
-    <!--block element-->
-    <ol>
-      <li><a href="1.html" id="active">Who is Sora?</a></li>
-      <!--원래 모든 a 태그에는 기본적으로 밑줄이 들어가지만 style.css 에서  모든 태그 언더라인 없애기 적용함. 하지만 여기 태그에서만 id="actice" 적용해서 밑줄과 빨간색 글씨로 표현 되는것임 !!! -->
-      <li><a href="2.html">Sora's dream</a></li>
-      <li><a href="3.html">Plan to marry</a></li>
-      <li><a href="4.html">The song Ryan likes</a></li>
+    <div id="grid">
+      <!--div 는 block element 이다-->
+      <ol>
+        <!--ordered-->
+        <li><a href="1.html" id="active">Who is Sora?</a></li>
+        <!--원래 모든 a 태그에는 기본적으로 밑줄이 들어가지만 style.css 에서  모든 태그 언더라인 없애기 적용함. 하지만 여기 태그에서만 id="actice" 라고 id 값을 지정해주고 .css 파일에서 #active 를 통제함으로써 밑줄과 빨간색 글씨로 표현 되는것임 !!! -->
+        <li><a href="2.html">Sora's dream</a></li>
+        <li><a href="3.html">Plan to marry</a></li>
+        <li><a href="4.html">The song Ryan likes</a></li>
+      </ol>
 
-    </ol>
-    <div id="article">
-      <h2>Who is Sora?</h2>
-      <img src="sora profile picture.png" width="300px">
-      <h3>Profile</h3>
-      <ul>
-        <li>Age : 27</li>
-        <li>Nationality : <a href="https://en.wikipedia.org/wiki/Taiwan" title="WIKIPEDIA" target="_blank"> Taiwan</a></li>
-        <li>Work Place : <a href="https://en.wikipedia.org/wiki/Procter_%26_Gamble" title="WIKIPEDIA" target="_blank">P&G</a></li>
-      </ul>
+      <div id="article">
+        <h2>Who is Sora?</h2>
+        <img src="sora profile picture.png" width="300px">
+        <h3>Profile</h3>
+
+        <ul>
+          <!--unordered-->
+          <li>Age : 27</li>
+          <li>Nationality : <a href="https://en.wikipedia.org/wiki/Taiwan" title="WIKIPEDIA" target="_blank"> Taiwan</a></li>
+          <li>Work Place : <a href="https://en.wikipedia.org/wiki/Procter_%26_Gamble" title="WIKIPEDIA" target="_blank">P&G</a></li>
+        </ul>
+
+      </div>
     </div>
-  </div>
 
-  <div id="button-location">
-    <!--  this=document.querySelector('#night_day2') 와 var target = document.querySelector('body') 미적용으로 리팩토링 하지 않은것-->
-    <input id="night_day2" type="button" value="a태그 색 미적용 night mode on" onclick="
-  if(document.querySelector('#night_day2').value === 'a태그 색 미적용 night mode on'){
+    <div id="button-location">
+      <!--  this=document.querySelector('#night_day2') 와 var target = document.querySelector('body') 미적용으로 리팩토링 하지 않은것-->
+      <input id="night_day2" type="button" value="a태그색(alist 배열), 객체, 변수 미적용 night mode on" onclick="
+  if(document.querySelector('#night_day2').value === 'a태그색(alist 배열), 객체, 변수 미적용 night mode on'){
   document.querySelector('body').style.backgroundColor='black';
   document.querySelector('body').style.color='white';
-  document.querySelector('#night_day2').value = 'a태그 색 미적용 day mode on'; <!--if 조건이 참 일경우, night_day2 아이디 선택자가 위치한 태그의 값을 day mode on 으로 변경시킴-->
-  document.querySelector('#night_day').value = 'a태그 색 미적용 day mode on'; <!--if 조건이 참 일경우, night_day 아이디 선택자가 위치한 태그의 값을 day mode on 으로 변경시킴-->
+  document.querySelector('#night_day2').value = 'a태그색(alist 배열), 객체, 변수 미적용 day mode on'; <!--if 조건이 참 일경우, night_day2 아이디 선택자가 위치한 태그의 값을 day mode on 으로 변경시킴-->
+  document.querySelector('#night_day').value = 'a태그색(alist 배열), 객체, 변수 미적용 day mode on'; <!--if 조건이 참 일경우, night_day 아이디 선택자가 위치한 태그의 값을 day mode on 으로 변경시킴-->
   document.querySelector('a').style.color='white'; <!--if 조건이 참 일경우, a 태그의 글자색을 하얀색으로 변경시킴. 그러나 모든 a 태그에 적용되지 않고, 가장 첫번째 a 태그에만 변경이 적용된다. 그래서 우리는 while 반복문을 이용해서 순차적으로 하나하나씩 모든 a 태그의 색을 변경시키는 방법을 적용했다.-->
   } else {
     document.querySelector('body').style.backgroundColor = 'powderblue';
     document.querySelector('body').style.color='black';
-    document.querySelector('#night_day2').value = 'a태그 색 미적용 night mode on';
-    document.querySelector('#night_day').value = 'a태그 색 미적용 night mode on';
+    document.querySelector('#night_day2').value = 'a태그색(alist 배열), 객체, 변수 미적용 night mode on';
+    document.querySelector('#night_day').value = 'a태그색(alist 배열), 객체, 변수 미적용 night mode on';
     document.querySelector('a').style.color='green';
     }">
+    </div>
 
-  </div>
-
-  <div id="button-location">
-    <input id="night_day" type="button" value="a태그 색 미적용 night mode on" onclick=" <!--id 선택자를 night_day 로 해서, night-day2 와 구분을 짓는다.-->
-if(document.querySelector('#night_day').value === 'a태그 색 미적용 night mode on'){
+    <div id="button-location">
+      <input id="night_day" type="button" value="a태그색(alist 배열), 객체, 변수 미적용 night mode on" onclick=" <!--id 선택자를 night_day 로 해서, night-day2 와 구분을 짓는다.-->
+if(document.querySelector('#night_day').value === 'a태그색(alist 배열), 객체, 변수 미적용 night mode on'){
   document.querySelector('body').style.backgroundColor='black';
   document.querySelector('body').style.color='white';
-  document.querySelector('#night_day').value = 'a태그 색 미적용 day mode on'; <!--id 선택자를 night_day 로 해서, night-day2 와 구분을 짓는다.-->
-  document.querySelector('#night_day2').value = 'a태그 색 미적용 day mode on'; <!--id 선택자를 night_day2 로 해서, night-day 와 구분을 짓는다.-->
+  document.querySelector('#night_day').value = 'a태그색(alist 배열), 객체, 변수 미적용 day mode on'; <!--id 선택자를 night_day 로 해서, night-day2 와 구분을 짓는다.-->
+  document.querySelector('#night_day2').value = 'a태그색(alist 배열), 객체, 변수 미적용 day mode on'; <!--id 선택자를 night_day2 로 해서, night-day 와 구분을 짓는다.-->
   document.querySelector('a').style.color='white';
 } else {
     document.querySelector('body').style.backgroundColor = 'powderblue';
     document.querySelector('body').style.color='black';
-    document.querySelector('#night_day').value = 'a태그 색 미적용 night mode on';
-    document.querySelector('#night_day2').value = 'a태그 색 미적용 night mode on';
+    document.querySelector('#night_day').value = 'a태그색(alist 배열), 객체, 변수 미적용 night mode on';
+    document.querySelector('#night_day2').value = 'a태그색(alist 배열), 객체, 변수 미적용 night mode on';
     document.querySelector('a').style.color='green';
     }">
+    </div>
 
-  </div>
+    <!-- ====================================== -->
+    <p>
+    <div id="disqus_thread"></div>
+    <script>
+      /**
+       *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+       *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+      /*
+      var disqus_config = function () {
+      this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+      */
+      (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document,
+          s = d.createElement('script');
+        s.src = 'https://web11-ytegrtd1xs.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </P>
+    <!-- ====================================== -->
 
-
-  <p>
-  <div id="disqus_thread"></div>
-  <script>
-    /**
-     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-    /*
-    var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function() { // DON'T EDIT BELOW THIS LINE
-      var d = document,
-        s = d.createElement('script');
-      s.src = 'https://web11-ytegrtd1xs.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', +new Date());
-      (d.head || d.body).appendChild(s);
-    })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-
-  </P>
 </body>
 
 </html>

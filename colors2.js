@@ -27,7 +27,9 @@ var Body = {
     // var target = document.querySelector('body');
     // target.style.color = color;
     $('body').css('color', color) // 이 웹페이지에 있는 모든 body 태그에 대하여, 색깔을 인자값 대로 한다.
+
   }, //property 와 property 를 구분해 주기 위해서 코마(,) 를 찍어줘야 한다.
+
   setBackgroundColor: function(color) {
     // var target = document.querySelector('body');
     // target.style.backgroundColor = color;

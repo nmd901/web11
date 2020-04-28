@@ -55,10 +55,10 @@ h1{
 
   <script>
     function nightDayHandler(self) {
-      if (self.value === '객체&메쏘드 night mode on') {
+      if (self.value === 'No .js file, No 객체선언 night mode on') {
         document.querySelector('body').style.backgroundColor = 'black';
         document.querySelector('body').style.color = 'white';
-        self.value = '객체&메쏘드 day mode on';
+        self.value = 'No .js file, No 객체선언 day mode on';
 
         var alist = document.querySelectorAll('a');
         var i = 0;
@@ -69,7 +69,7 @@ h1{
       } else {
         document.querySelector('body').style.backgroundColor = 'orange';
         document.querySelector('body').style.color = 'green';
-        self.value = '객체&메쏘드 night mode on';
+        self.value = 'No .js file, No 객체선언 night mode on';
 
         var alist = document.querySelectorAll('a');
         var i = 0;
@@ -82,14 +82,11 @@ h1{
   </script>
 
   <span id="button-location">
-    <input id="test1" type="button" value="객체&메쏘드 night mode on" onclick="
-nightDayHandler(this);
-  ">
+
+    <input id="test1" type="button" value="No .js file, No 객체선언  night mode on" onclick="nightDayHandler(this);">
 
 
-    <input type="button" value="객체&메쏘드 night mode on" onclick="
-    nightDayHandler(this);
-">
+    <input type="button" value="No .js file, No 객체선언 night mode on" onclick="nightDayHandler(this);">
 
   </span>
 
